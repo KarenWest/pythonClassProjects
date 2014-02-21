@@ -1,0 +1,18 @@
+balance = 4773
+annualInterestRate = 0.2
+
+months = 12
+multiple = 10
+precision = -1
+
+case = round(balance / months, precision)
+limit = (balance * (1 + annualInterestRate) ** months) / months
+while case < limit:
+    b = balance
+    for m in range(12):
+        b -= case
+        b = b * (1 + (annualInterestRate / months))
+    if b <= 0:
+        break
+    case += multiple
+print('Lowest Payment: ' + str(case))

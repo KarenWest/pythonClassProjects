@@ -1,0 +1,23 @@
+balance = 320000
+annualInterestRate = 0.2
+
+months = 12
+precision = 2
+epsilon = 0.01
+
+monthly_interest = 1 + annualInterestRate / months
+low = balance / months
+high = balance * monthly_interest ** months / months
+case = (high + low) / 2
+b = balance
+while abs(b) >= epsilon:
+    b = balance
+    for m in range(months):
+        b -= case
+        b = b * monthly_interest
+    if b <= 0:
+        high = case
+    else:
+        low = case
+    case = (high + low) / 2
+print('Lowest Payment: ' + str(round(case, precision)))

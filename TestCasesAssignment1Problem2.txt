@@ -1,0 +1,203 @@
+﻿Test Case 1:
+              balance = 3329
+              annualInterestRate = 0.2
+
+              Result Your Code Should Generate:
+              -------------------
+              Lowest Payment: 310
+Test Case 2:
+              balance = 4773
+              annualInterestRate = 0.2
+              
+              Result Your Code Should Generate:
+              -------------------
+              Lowest Payment: 440
+Test Case 3:
+              balance = 3926
+              annualInterestRate = 0.2
+
+              Result Your Code Should Generate:
+              -------------------
+              Lowest Payment: 360
+
+Test results
+INCORRECT Hide output
+Test Case 1
+
+balance = 3329; annualInterestRate = 0.2
+
+Output:
+
+    Lowest Payment: 310
+
+
+Test Case 2
+
+balance = 4773; annualInterestRate = 0.2
+
+Output:
+
+    Lowest Payment: 440
+
+
+Test Case 3
+
+balance = 3926; annualInterestRate = 0.2
+
+Output:
+
+    Lowest Payment: 360
+
+
+Randomized Test Case 1
+
+balance = 495; annualInterestRate = 0.2
+
+Your output:
+
+    Lowest Payment: 0
+
+
+Correct output:
+
+    Lowest Payment: 50
+
+
+Randomized Test Case 2
+
+balance = 139; annualInterestRate = 0.18
+
+Your output:
+
+    Lowest Payment: 10
+
+
+Correct output:
+
+    Lowest Payment: 20
+
+
+Randomized Test Case 3
+
+balance = 50; annualInterestRate = 0.25
+
+Your output:
+
+    Lowest Payment: 0
+
+
+Correct output:
+
+    Lowest Payment: 10
+
+
+Randomized Test Case 4
+
+balance = 206; annualInterestRate = 0.18
+
+Your output:
+
+    Lowest Payment: 0
+
+
+Correct output:
+
+    Lowest Payment: 20
+
+
+Randomized Test Case 5
+
+balance = 4440; annualInterestRate = 0.15
+
+Your output:
+
+    Lowest Payment: 410
+
+
+Correct output:
+
+    Lowest Payment: 400
+
+
+Randomized Test Case 6
+
+balance = 4497; annualInterestRate = 0.04
+
+Output:
+
+    Lowest Payment: 390
+
+
+Randomized Test Case 7
+
+balance = 4962; annualInterestRate = 0.18
+
+Your output:
+
+    Lowest Payment: 460
+
+
+Correct output:
+
+    Lowest Payment: 450
+
+
+Randomized Test Case 8
+
+balance = 3488; annualInterestRate = 0.18
+
+Your output:
+
+    Lowest Payment: 340
+
+
+Correct output:
+
+    Lowest Payment: 320
+
+
+Randomized Test Case 9
+
+balance = 3308; annualInterestRate = 0.2
+
+Your output:
+
+    Lowest Payment: 300
+
+
+Correct output:
+
+    Lowest Payment: 310
+
+
+Randomized Test Case 10
+
+balance = 4055; annualInterestRate = 0.18
+
+Output:
+
+    Lowest Payment: 370
+
+
+Randomized Test Case 11
+
+balance = 3527; annualInterestRate = 0.18
+
+Output:
+
+    Lowest Payment: 320
+
+
+Randomized Test Case 12
+
+balance = 4003; annualInterestRate = 0.04
+
+Your output:
+
+    Lowest Payment: 350
+
+
+Correct output:
+
+    Lowest Payment: 340
+

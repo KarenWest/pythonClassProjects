@@ -1,0 +1,12 @@
+balance = 999999
+annualInterestRate = 0.18
+
+months = 12
+precision = 2
+
+result = 0
+rate = 1 + annualInterestRate / months
+for m in range(months):
+    result += rate ** m
+result = balance * rate ** (months - 1) / result
+print('Lowest Payment: ' + str(round(result, precision)))

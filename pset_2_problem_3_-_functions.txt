@@ -1,0 +1,29 @@
+balance = 999999
+annualInterestRate = 0.18
+
+def test_year(case, months):
+    b = balance
+    for _m in range(months):
+        b -= case
+        b = b * (1 + (annualInterestRate / months))
+    return b
+
+def problem3():
+    months = 12
+    epsilon = 0.01
+    precision = 2
+    low = balance / months
+    high = balance * (1 + annualInterestRate / months) ** months / months
+    case = low + (high - low) / 2.0
+    result = epsilon
+    
+    while abs(result) >= epsilon:
+        result = test_year(case, months)
+        if result < 0:
+            high = case
+        else:
+            low = case
+        case = low + (high - low) / 2.0
+    return str(round(case, precision))
+
+print('Lowest Payment: ' + problem3())

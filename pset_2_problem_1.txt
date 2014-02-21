@@ -1,0 +1,17 @@
+balance = 4842
+annualInterestRate = 0.2
+monthlyPaymentRate = 0.04
+
+months = 12
+precision = 2
+
+total_payed = 0
+for m in range(1, months + 1):
+    print('Month: ' + str(m))
+    mmp = balance * monthlyPaymentRate
+    total_payed += mmp
+    print('Minimum monthly payment: ' + str(round(mmp, precision)))
+    balance = (balance - mmp) * (1 + annualInterestRate / months)
+    print('Remaining balance: ' + str(round(balance, precision)))
+print('Total paid: ' + str(round(total_payed, precision)))
+print('Remaining balance: ' + str(round(balance, precision)))

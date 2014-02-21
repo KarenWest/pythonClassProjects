@@ -1,0 +1,19 @@
+# Problem 3: Newton's Method
+def computeRoot(poly, x_0, epsilon):
+    '''
+    Uses Newton's method to find and return a root of a polynomial function.
+    Returns a list containing the root and the number of iterations required
+    to get to the root.
+ 
+    poly: list of numbers, length > 1.
+         Represents a polynomial function containing at least one real root.
+         The derivative of this polynomial function at x_0 is not 0.
+    x_0: float
+    epsilon: float > 0
+    returns: list [float, int]
+    '''
+    iteration = 0
+    while abs(evaluatePoly(poly, x_0)) >= epsilon:
+        iteration += 1
+        x_0 -= evaluatePoly(poly, x_0) / evaluatePoly(computeDeriv(poly), x_0)
+    return [x_0, iteration]

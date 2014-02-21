@@ -1,0 +1,34 @@
+def isWordGuessed(secretWord, lettersGuessed):
+    '''
+    secretWord: string, the word the user is guessing
+    lettersGuessed: list, what letters have been guessed so far
+    returns: boolean, True if all the letters of secretWord are in lettersGuessed;
+      False otherwise
+    '''
+    for c in secretWord:
+        if c not in lettersGuessed:
+            return False
+    return True
+
+def getGuessedWord(secretWord, lettersGuessed):
+    '''
+    secretWord: string, the word the user is guessing
+    lettersGuessed: list, what letters have been guessed so far
+    returns: string, comprised of letters and underscores that represents
+      what letters in secretWord have been guessed so far.
+    '''
+    temp = []
+    for c in secretWord:
+        if c in lettersGuessed:
+            temp.append(c)
+        else:
+            temp.append('_')
+    return ' '.join(temp)
+
+def getAvailableLetters(lettersGuessed):
+    '''
+    lettersGuessed: list, what letters have been guessed so far
+    returns: string, comprised of letters that represents what letters have not
+      yet been guessed.
+    '''
+    return string.lowercase.translate(None, ''.join(lettersGuessed))
